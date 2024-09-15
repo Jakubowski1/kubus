@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "../../public/globals.css";
-
-const geistSans = localFont({
-  src: "../fonts/Afacad-Regular.ttf"
-});
+import "@/public/globals.css";
 
 
 export const metadata: Metadata = {
@@ -19,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans}`}>
+      <body>
         {children}
       </body>
     </html>

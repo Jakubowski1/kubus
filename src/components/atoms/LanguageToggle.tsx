@@ -1,27 +1,17 @@
-import { useState } from 'react';
+import React from 'react';
+import styles from '../../styles/MenuImages.module.css';  // Or move styles specific to this component
 
-const LanguageToggle = () => {
-  const [language, setLanguage] = useState<'EN' | 'PL'>('EN'); 
+type LanguageToggleProps = {
+    language: string;
+    toggleLanguage: () => void;
+};
 
-  const toggleLanguage = () => {
-    
-    setLanguage(prevLanguage => (prevLanguage === 'EN' ? 'PL' : 'EN'));
-
-    
-  };
-
-  return (
-    <button 
-      onClick={toggleLanguage} 
-      style={{ 
-        backgroundColor: 'transparent' , 
-        border: 'none', 
-        padding: '10px', 
-        }}
-    >
-      {language === 'EN' ? 'EN / PL' : 'PL / EN'}
-    </button>
-  );
+const LanguageToggle: React.FC<LanguageToggleProps> = ({ language, toggleLanguage }) => {
+    return (
+        <div onClick={toggleLanguage} className={styles.languageToggle}>
+            {language === 'en' ? 'EN / PL' : 'PL / EN'}
+        </div>
+    );
 };
 
 export default LanguageToggle;

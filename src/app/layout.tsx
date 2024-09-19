@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@/public/globals.css";
-import "../styles/layout.module.css"
+import "./layout.css"
 
 
 export const metadata: Metadata = {

@@ -29,35 +29,35 @@ div.centerText {
     text-align: center;
 }
 
-div.menuImage {
+a.menuImage {
     top: 3%;
     transition: transform 0.3s ease;
     cursor: url('../../public/handCursor.ico'), pointer;
 }
 
-div.menuImage:hover {
+a.menuImage:hover {
     transform: scale(1.2);
 }
 
-div.doggiesImage {
+a.doggiesImage {
     bottom: 20%;
     right: 6%;
     transition: transform 0.3s ease;
     cursor: url('../../public/handCursor.ico'), pointer;
 }
 
-div.doggiesImage:hover {
+a.doggiesImage:hover {
     transform: scale(1.2);
 }
 
-div.contactImage {
+a.contactImage {
     bottom: 20%;
     left: 10%;
     transition: transform 0.3s ease;
     cursor: url('../../public/handCursor.ico'), pointer;
 }
 
-div.contactImage:hover {
+a.contactImage:hover {
     transform: scale(1.2);
 }
 
@@ -129,7 +129,7 @@ div.languageToggle:hover {
 }
 
 @media (max-width: 870px) {
-    
+
     .imageSection {
         margin-top: 90%;
 
@@ -149,12 +149,12 @@ div.languageToggle:hover {
         margin-top: 100%;
     }
 
-    div.doggiesImage,
-    div.contactImage {
+    a.doggiesImage,
+    a.contactImage {
         top: 50%;
     }
 
-    div.menuImage {
+    a.menuImage {
         top: 20%;
     }
 

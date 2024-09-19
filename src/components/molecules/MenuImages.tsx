@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { landingPageSection } from '@/src/services';
 import styles from '../../styles/MenuImages.module.css'; 
 import logo from "../../assets/logokubus.png";
+import LanguageToggle from '../atoms/LanguageToggle'; // Import the new component
 
 type ImageData = {
     url: string;
@@ -17,11 +18,9 @@ type LandingPageData = {
     welcomeText: Text[];
 }[];
 
-type Props = {};
-
-const MenuImages: React.FC<Props> = () => {
+const MenuImages: React.FC = () => {
     const [data, setData] = useState<LandingPageData | null>(null);
-    const [language, setLanguage] = useState<string>('en'); 
+    const [language, setLanguage] = useState<string>('en');  // State for language
 
     useEffect(() => {
         getLandingPageData();
@@ -59,9 +58,9 @@ const MenuImages: React.FC<Props> = () => {
             {data && data.length > 0 && (
                 <>
                     <div className={styles.welcomeTag}>Zapraszamy!</div>
-                    <div onClick={toggleLanguage} className={styles.languageToggle}>
-                        {language === 'en' ? 'EN / PL' : 'PL / EN'}
-                    </div>
+
+                    {/* Use the LanguageToggle component */}
+                    <LanguageToggle language={language} toggleLanguage={toggleLanguage} />
 
                     <div
                         className={styles.centerText}
@@ -71,7 +70,7 @@ const MenuImages: React.FC<Props> = () => {
                     />
 
                     <div className={styles.imageSection}>
-                        <div className={`${styles.imageWrapper} ${styles.menuImage}`}>
+                        <a href='menu' className={`${styles.imageWrapper} ${styles.menuImage}`}>
                             <Image
                                 src={data[0].menuImage.url}
                                 alt="Menu Image"
@@ -79,9 +78,9 @@ const MenuImages: React.FC<Props> = () => {
                                 height={300}
                                 layout="responsive"
                             />
-                        </div>
+                        </a>
 
-                        <div className={`${styles.imageWrapper} ${styles.doggiesImage}`}>
+                        <a href='pieski' className={`${styles.imageWrapper} ${styles.doggiesImage}`}>
                             <Image
                                 src={getImageByLanguage(data[0].doggiesImage)}
                                 alt="Doggies Image"
@@ -89,9 +88,9 @@ const MenuImages: React.FC<Props> = () => {
                                 height={350}
                                 layout="responsive"
                             />
-                        </div>
+                        </a>
 
-                        <div className={`${styles.imageWrapper} ${styles.contactImage}`}>
+                        <a href='kontakt' className={`${styles.imageWrapper} ${styles.contactImage}`}>
                             <Image
                                 src={getImageByLanguage(data[0].contactImage)}
                                 alt="Contact Image"
@@ -99,7 +98,7 @@ const MenuImages: React.FC<Props> = () => {
                                 height={350}
                                 layout="responsive"
                             />
-                        </div>
+                        </a>
                     </div>
                 </>
             )}

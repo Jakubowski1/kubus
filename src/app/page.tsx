@@ -10,14 +10,9 @@ import MenuImages from "../components/molecules/MenuImages";
 
 
 export default function Home() {
-  
-  
-
   return (
     <div>
-    
       <MenuImages/>
-   
     </div>
   );
 }

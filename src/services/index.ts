@@ -12,9 +12,9 @@ type LandingPageResponse = {
     menuImage: {
       url: string;
     };
-    shortWelcomeText: {
+    welcomeText: {
       html: string;
-    };
+    }[];
   }[];
 };
 
@@ -33,7 +33,7 @@ export const landingPageSection = async (): Promise<LandingPageResponse> => {
         menuImage {
           url
         }
-        shortWelcomeText {
+        welcomeText {
           html
         }
       }

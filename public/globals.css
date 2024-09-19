@@ -1,7 +1,14 @@
 body {
   background-color: #FEE5A0 ;
   font-family: 'Afacad-Regular', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: url('./purplecursor.ico'), pointer; 
 
+}
+.clickable {
+  cursor: url('./handCursor.ico'), pointer;
 }
 @font-face {
   font-family: 'Afacad-Regular';
@@ -9,7 +16,6 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Afacad-Bold';
   src: url('/fonts/Afacad-Bold.ttf') format('truetype');
@@ -30,4 +36,5 @@ body {
   font-weight: 600;
   font-style: normal;
 }
+
 

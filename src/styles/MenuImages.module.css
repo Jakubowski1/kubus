@@ -1,0 +1,165 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 10%;
+    cursor: url('../../public/purplecursor.ico'), pointer;
+}
+
+div.centerText {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    z-index: 10;
+    padding-bottom: 0;
+}
+
+.imageSection {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+}
+
+.imageWrapper {
+    position: absolute;
+    text-align: center;
+}
+
+div.menuImage {
+    top: 3%;
+    transition: transform 0.3s ease;
+    cursor: url('../../public/handCursor.ico'), pointer;
+}
+
+div.menuImage:hover {
+    transform: scale(1.2);
+}
+
+div.doggiesImage {
+    bottom: 20%;
+    right: 6%;
+    transition: transform 0.3s ease;
+    cursor: url('../../public/handCursor.ico'), pointer;
+}
+
+div.doggiesImage:hover {
+    transform: scale(1.2);
+}
+
+div.contactImage {
+    bottom: 20%;
+    left: 10%;
+    transition: transform 0.3s ease;
+    cursor: url('../../public/handCursor.ico'), pointer;
+}
+
+div.contactImage:hover {
+    transform: scale(1.2);
+}
+
+.languageToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: #54382B;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 900;
+    transition: transform 0.3s ease;
+    cursor: url('../../public/handCursor.ico'), pointer;
+}
+
+div.languageToggle:hover {
+    transform: scale(1.2);
+}
+
+.welcomeTag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    color: #54382B;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+@media (max-width: 1450px) {
+    .welcomeTag {
+        display: none;
+    }
+
+    .logoSection {
+        position: absolute;
+        top: 20px;
+        left: 40px;
+        display: block;
+        height: 50px;
+        width: auto;
+    }
+
+    .container {
+        padding-top: 20%;
+    }
+
+    .imageSection {
+        flex-direction: column;
+        align-items: center;
+        position: static;
+        margin-top: 20%;
+    }
+
+    .imageWrapper {
+        margin-top: 30%;
+    }
+
+    @media (max-width: 1250px) {
+        .imageWrapper {
+            margin-top: 50%;
+        }
+    }
+
+}
+
+@media (max-width: 870px) {
+    
+    .imageSection {
+        margin-top: 90%;
+
+    }
+
+}
+
+@media (max-width: 660px) {
+
+    .imageWrapper {
+        width: 40%;
+        margin-top: 40%;
+        max-width: none;
+    }
+
+    .imageSection {
+        margin-top: 100%;
+    }
+
+    div.doggiesImage,
+    div.contactImage {
+        top: 50%;
+    }
+
+    div.menuImage {
+        top: 20%;
+    }
+
+    div.centerText {
+        padding-top: 10%;
+    }
+
+}

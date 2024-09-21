@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "@/public/globals.css";
-import "./layout.css"
-
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
+import '@/public/globals.css';
+import './layout.css';
 
 export const metadata: Metadata = {
-  title: "Kubus",
-  description: "Strona internetowa Kubusa piekarenki",
+  title: 'Kubus',
+  description: 'Strona internetowa Kubusa piekarenki',
 };
 
 export default function RootLayout({
@@ -16,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="layout">
-      <body >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

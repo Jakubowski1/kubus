@@ -1,0 +1,85 @@
+.selectionContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  gap: 8%;
+}
+
+.selectionContainer button {
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 900;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: black;
+  transition:
+    color 0.3s,
+    font-weight 0.3s;
+  outline: none;
+  z-index: 100000;
+  transition: transform 0.3s ease;
+}
+
+.selectionContainer button:hover {
+  color: #333;
+  transform: scale(1.2);
+}
+
+.active {
+  font-weight: bold;
+  color: black;
+  font-family: inherit;
+}
+
+.nonactive {
+  font-weight: 500;
+  color: gray;
+}
+
+.menuSection {
+  width: 70%;
+  margin: 5% auto; /* Center the section */
+  display: grid;
+}
+
+.menuItem {
+  width: 60%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Left-aligned items */
+.leftAlign {
+  text-align: left;
+  align-content: right;
+  left: 55%;
+}
+
+/* Right-aligned items */
+.rightAlign {
+  text-align: right;
+  width: 40%;
+}
+
+/* Green leaf icon for vegan items */
+.leafIcon {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Random position shift for each item */
+.menuItem {
+  position: relative;
+  padding-bottom: 20px;
+  display: inline;
+  width: 40%;
+}
+.ingridients {
+  width: 40%;
+  text-align: inherit;
+  right: inherit;
+  left: inherit;
+}

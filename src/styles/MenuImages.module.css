@@ -1,165 +1,159 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding-top: 10%;
-    cursor: url('../../public/purplecursor.ico'), pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 10%;
+  cursor: url('../../public/purplecursor.ico'), pointer;
 }
 
 div.centerText {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 900;
-    z-index: 10;
-    padding-bottom: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  z-index: 10;
+  padding-bottom: 0;
 }
 
 .imageSection {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    position: relative;
-    margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
 }
 
 .imageWrapper {
-    position: absolute;
-    text-align: center;
+  position: absolute;
+  text-align: center;
 }
 
 a.menuImage {
-    top: 3%;
-    transition: transform 0.3s ease;
-    cursor: url('../../public/handCursor.ico'), pointer;
+  top: 3%;
+  transition: transform 0.3s ease;
+  cursor: url('../../public/handCursor.ico'), pointer;
 }
 
 a.menuImage:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 a.doggiesImage {
-    bottom: 20%;
-    right: 6%;
-    transition: transform 0.3s ease;
-    cursor: url('../../public/handCursor.ico'), pointer;
+  bottom: 20%;
+  right: 6%;
+  transition: transform 0.3s ease;
+  cursor: url('../../public/handCursor.ico'), pointer;
 }
 
 a.doggiesImage:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 a.contactImage {
-    bottom: 20%;
-    left: 10%;
-    transition: transform 0.3s ease;
-    cursor: url('../../public/handCursor.ico'), pointer;
+  bottom: 20%;
+  left: 10%;
+  transition: transform 0.3s ease;
+  cursor: url('../../public/handCursor.ico'), pointer;
 }
 
 a.contactImage:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .languageToggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: transparent;
-    color: #54382B;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 900;
-    transition: transform 0.3s ease;
-    cursor: url('../../public/handCursor.ico'), pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: #54382b;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 900;
+  transition: transform 0.3s ease;
+  cursor: url('../../public/handCursor.ico'), pointer;
 }
 
 div.languageToggle:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .welcomeTag {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: transparent;
-    color: #54382B;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: 900;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  color: #54382b;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 900;
 }
 
 @media (max-width: 1450px) {
-    .welcomeTag {
-        display: none;
-    }
+  .welcomeTag {
+    display: none;
+  }
 
-    .logoSection {
-        position: absolute;
-        top: 20px;
-        left: 40px;
-        display: block;
-        height: 50px;
-        width: auto;
-    }
+  .logoSection {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    display: block;
+    height: 50px;
+    width: auto;
+  }
 
-    .container {
-        padding-top: 20%;
-    }
+  .container {
+    padding-top: 20%;
+  }
 
-    .imageSection {
-        flex-direction: column;
-        align-items: center;
-        position: static;
-        margin-top: 20%;
-    }
+  .imageSection {
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    margin-top: 20%;
+  }
 
+  .imageWrapper {
+    margin-top: 30%;
+  }
+
+  @media (max-width: 1250px) {
     .imageWrapper {
-        margin-top: 30%;
+      margin-top: 50%;
     }
-
-    @media (max-width: 1250px) {
-        .imageWrapper {
-            margin-top: 50%;
-        }
-    }
-
+  }
 }
 
 @media (max-width: 870px) {
-
-    .imageSection {
-        margin-top: 90%;
-
-    }
-
+  .imageSection {
+    margin-top: 90%;
+  }
 }
 
 @media (max-width: 660px) {
+  .imageWrapper {
+    width: 40%;
+    margin-top: 40%;
+    max-width: none;
+  }
 
-    .imageWrapper {
-        width: 40%;
-        margin-top: 40%;
-        max-width: none;
-    }
+  .imageSection {
+    margin-top: 100%;
+  }
 
-    .imageSection {
-        margin-top: 100%;
-    }
+  a.doggiesImage,
+  a.contactImage {
+    top: 50%;
+  }
 
-    a.doggiesImage,
-    a.contactImage {
-        top: 50%;
-    }
+  a.menuImage {
+    top: 20%;
+  }
 
-    a.menuImage {
-        top: 20%;
-    }
-
-    div.centerText {
-        padding-top: 10%;
-    }
-
+  div.centerText {
+    padding-top: 10%;
+  }
 }

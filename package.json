@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "graphql": "^16.9.0",
@@ -21,6 +22,13 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "typescript": "^5"
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.36.1",
+    "globals": "^15.9.0",
+    "prettier": "^3.3.3",
+    "typescript": "5.5.x",
+    "typescript-eslint": "^8.6.0"
   }
 }

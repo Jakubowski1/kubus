@@ -1,6 +1,2 @@
-const menuSelectionPl = [
-    "szejki", "kanapki","śniadania", "napoje"
-]
-const menuSelectionEn = [
-    "shakes", "sandwiches", "breakfasts", "drinks"
-]
+export const menuSelectionPl = ['kanapki', 'śniadania', 'szejki', 'napoje'];
+export const menuSelectionEn = ['breakfasts', 'shakes', 'sandwiches', 'drinks'];

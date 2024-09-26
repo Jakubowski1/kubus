@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import Navbar from '@/src/components/molecules/Navbar';
 import MenuPage from '@/src/components/molecules/Menu';
+import Footer from '@/src/components/atoms/Footer';
 
 export default function Page() {
   const [language, setLanguage] = useState<string>('en');
@@ -12,9 +13,10 @@ export default function Page() {
   };
 
   return (
-    <div>
+    <Fragment>
       <Navbar language={language} toggleLanguage={toggleLanguage} />
       <MenuPage language={language} />
-    </div>
+      <Footer />
+    </Fragment>
   );
 }

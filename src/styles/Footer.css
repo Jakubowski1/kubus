@@ -1,0 +1,14 @@
+.footer {
+  position: sticky;
+  display: block;
+  padding-bottom: 20px;
+  top: 100%;
+  font-size: 14px;
+  color: #563a30;
+  opacity: 0.6;
+  text-decoration: none;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center; /* Center the content within the footer */
+  cursor: url('../../public/purplecursor.ico'), pointer;
+}

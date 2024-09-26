@@ -12,7 +12,15 @@ type NavbarProps = {
 const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
   return (
     <div className="navbox">
-      <Image src={logo} height={63} className="logo" alt="logo of kubus" />{' '}
+      <a href="/" className="clickable">
+        <Image
+          src={logo}
+          height={63}
+          className="logo"
+          alt="logo of kubus"
+          layout="responsive"
+        />{' '}
+      </a>
       <LanguageToggle language={language} toggleLanguage={toggleLanguage} />
     </div>
   );

@@ -1,11 +1,17 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
 import '@/public/globals.css';
 import './layout.css';
 
 export const metadata: Metadata = {
-  title: 'Kubus',
-  description: 'Strona internetowa Kubusa piekarenki',
+  title: {
+    default: 'Kubuś Piekarenka',
+    template: '%s - Kubuś',
+  },
+  description:
+    'Śniadanie & piekarenka. Otwarte codziennie 8:00 - 20:00 ul. Marszałkowska 19, Warszawa',
+  twitter: {
+    card: 'summary_large_image',
+  },
 };
 
 export default function RootLayout({

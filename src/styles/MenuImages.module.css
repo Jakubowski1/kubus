@@ -63,10 +63,10 @@ a.contactImage:hover {
 
 .languageToggle {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 20px;
   background-color: transparent;
-  color: #54382b;
+  color: #1c1614;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -119,20 +119,36 @@ div.languageToggle:hover {
   .imageWrapper {
     margin-top: 30%;
   }
-
-  @media (max-width: 1250px) {
-    .imageWrapper {
-      margin-top: 50%;
-    }
-  }
 }
+@media (max-width: 1250px) {
+  .imageWrapper {
+    width: 40%;
+    margin-top: 10%;
+    max-width: none;
+  }
 
-@media (max-width: 870px) {
   .imageSection {
-    margin-top: 90%;
+    margin-top: 20%;
+  }
+
+  a.doggiesImage {
+    right: 2%;
+    scale: 0.6;
+  }
+  a.contactImage {
+    scale: 0.6;
+    left: 0%;
+  }
+
+  a.menuImage {
+    top: 50%;
+    scale: 0.6;
+  }
+
+  div.centerText {
+    padding-top: 10%;
   }
 }
-
 @media (max-width: 660px) {
   .imageWrapper {
     width: 40%;
@@ -144,13 +160,20 @@ div.languageToggle:hover {
     margin-top: 100%;
   }
 
-  a.doggiesImage,
+  a.doggiesImage {
+    top: 50%;
+    right: 6%;
+    scale: 1;
+  }
   a.contactImage {
     top: 50%;
+    scale: 1;
+    left: 10%;
   }
 
   a.menuImage {
     top: 20%;
+    scale: 1;
   }
 
   div.centerText {

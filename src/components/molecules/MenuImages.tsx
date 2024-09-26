@@ -3,7 +3,8 @@ import Image from 'next/image';
 import { landingPageSection } from '@/src/services';
 import styles from '../../styles/MenuImages.module.css';
 import logo from '../../assets/logokubus.png';
-import LanguageToggle from '../atoms/LanguageToggle'; // Import the new component
+import LanguageToggle from '../atoms/LanguageToggle';
+import '../../styles/navbar.css';
 
 type ImageData = {
   url: string;
@@ -20,7 +21,7 @@ type LandingPageData = {
 
 const MenuImages: React.FC = () => {
   const [data, setData] = useState<LandingPageData | null>(null);
-  const [language, setLanguage] = useState<string>('en'); // State for language
+  const [language, setLanguage] = useState<string>('en');
 
   useEffect(() => {
     getLandingPageData();
@@ -49,12 +50,17 @@ const MenuImages: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <Image
-        className={styles.logoSection}
-        src={logo}
-        height={220}
-        alt="logo of kubus"
-      />
+      <a
+        href="/"
+        style={{ cursor: " url('../../public/handCursor.ico'), pointer" }}
+      >
+        <Image
+          className={styles.logoSection}
+          src={logo}
+          height={220}
+          alt="logo of kubus"
+        />
+      </a>
       {data && data.length > 0 && (
         <>
           <div className={styles.welcomeTag}>Zapraszamy!</div>
@@ -70,7 +76,7 @@ const MenuImages: React.FC = () => {
 
           <div className={styles.imageSection}>
             <a
-              href="menu"
+              href="/menu"
               className={`${styles.imageWrapper} ${styles.menuImage}`}
             >
               <Image
